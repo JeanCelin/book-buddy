@@ -1,5 +1,5 @@
 import { BookOpen, MoonIcon, PlusIcon } from "lucide-react";
-import Button from "@/components/buttons/Button";
+import Button from "@/components/Button";
 import styles from "./Header.module.css";
 
 export default function Header() {

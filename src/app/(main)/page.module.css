@@ -2,5 +2,10 @@
   display: grid;
   width: 100vw;
   background-color: var(--foreground);
-
+}
+.main__section {
+  padding: 16px;
+  max-width: 1024px;
+  width: 100%;
+  justify-self: center;
 }
