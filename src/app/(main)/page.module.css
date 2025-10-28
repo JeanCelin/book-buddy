@@ -1,0 +1,6 @@
+.main {
+  display: grid;
+  width: 100vw;
+  background-color: var(--foreground);
+
+}

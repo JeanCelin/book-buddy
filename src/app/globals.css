@@ -1,6 +1,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --border-color: #e5e5e5;
+  --font-color-light: #a1a1a1;
+
+  /* Break points */
+
+  --breakpoint-xxs: 400px; /* Extra extra small devices */
+  --breakpoint-xs: 480px; /* Extra small devices */
+  --breakpoint-sm: 640px; /* Small devices */
+  --breakpoint-md: 768px; /* Medium devices */
+  --breakpoint-md2: 834px; /* Tablets devices */
+  --breakpoint-lg: 1024px; /* Large devices */
+  --breakpoint-xl: 1280px; /* Extra large devices */
+  --breakpoint-2xl: 1536px; /* 2X large devices */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,6 +43,17 @@ body {
   margin: 0;
 }
 
+h1 {
+  font-size: 18px;
+}
+h2,
+span {
+  font-size: 16px;
+}
+p {
+  font-size: 14px;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -38,5 +62,31 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  h1 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 16px;
+  }
+  h2,
+  span {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 834px) {
+    h1 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 16px;
+  }
+  h2,
+  span {
+    font-size: 18px;
   }
 }
