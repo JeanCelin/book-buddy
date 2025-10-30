@@ -3,6 +3,7 @@
   border: none;
   border-radius: 8px;
   font-weight: 500;
+  border: 1px solid var(--color-light);
 
   display: flex;
   align-items: center;
@@ -15,6 +16,7 @@
 }
 
 .button:hover {
+  background-color: var(--color-light);
   transform: translateY(-2px); /* leve elevação */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* sombra sutil mais forte */
 }

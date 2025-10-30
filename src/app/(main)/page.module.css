@@ -1,6 +1,10 @@
+.page {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
 .main {
   display: grid;
-  width: 100vw;
   background-color: var(--foreground);
 }
 .section {
@@ -8,4 +12,15 @@
   max-width: 1024px;
   width: 100%;
   justify-self: center;
+}
+.form {
+  z-index: 10;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.425);
 }
