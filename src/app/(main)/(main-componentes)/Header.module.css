@@ -21,7 +21,7 @@
 }
 .header__title_expended p{
   font-size: 14px;
-  color: var(--font-color-light);
+  color: var(--color-light);
   font-weight: 200;
 }
 .header__buttons {

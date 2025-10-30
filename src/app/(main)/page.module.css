@@ -3,7 +3,7 @@
   width: 100vw;
   background-color: var(--foreground);
 }
-.main__section {
+.section {
   padding: 16px;
   max-width: 1024px;
   width: 100%;
