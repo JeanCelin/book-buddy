@@ -7,6 +7,7 @@ import SearchButtons from "@/components/SearchButtons";
 import { useState } from "react";
 
 import AddBookForm from "@/components/AddBookForm";
+import NotFoundBook from "@/components/NotFoundBook"
 
 export default function Home() {
   const [showForm, setShowForm] = useState(false);
@@ -22,11 +23,14 @@ export default function Home() {
         <div className={styles.section}>
           <SearchButtons />
         </div>
-        {showForm && (
+        {showForm ? (
           <div className={`${styles.section} ${styles.form}`}>
-            <AddBookForm />
+            <AddBookForm setShowForm={setShowForm}/>
           </div>
-        )}
+        ) : <div className={`${styles.section}`}>
+            <NotFoundBook setShowForm={setShowForm}  />
+          </div> }
+        
       </main>
     </div>
   );

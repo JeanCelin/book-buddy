@@ -4,7 +4,12 @@ import { useState } from "react";
 import styles from "./AddBookForm.module.css";
 import Button from "./Button";
 
-export default function AddBookForm() {
+// Define as props do componente corretamente
+type AddBookFormProps = {
+  setShowForm: (value: boolean) => void;
+};
+
+export default function AddBookForm({ setShowForm }: AddBookFormProps) {
   const [genre, setGenre] = useState("romance");
   const [status, setStatus] = useState("Quero Ler");
 
@@ -17,11 +22,11 @@ export default function AddBookForm() {
       <div className={styles.fields__container}>
         <div className={styles.field}>
           <label htmlFor="title">Título *</label>
-          <input id="title" type="text"></input>
+          <input id="title" type="text" />
         </div>
         <div className={styles.field}>
           <label htmlFor="author">Autor *</label>
-          <input id="author" type="text"></input>
+          <input id="author" type="text" />
         </div>
         <div className={styles.field}>
           <label htmlFor="genre">Gênero</label>
@@ -53,7 +58,7 @@ export default function AddBookForm() {
         </div>
         <div className={styles.field}>
           <label htmlFor="status">Status *</label>
-          <select id="status" defaultValue="Quero ler">
+          <select id="status" defaultValue="Quero Ler">
             <option value="Quero Ler">Quero Ler</option>
             <option value="Lendo">Lendo</option>
             <option value="Lido">Lido</option>
@@ -61,22 +66,29 @@ export default function AddBookForm() {
         </div>
         <div className={styles.field}>
           <label htmlFor="cover">URL da Capa</label>
-          <input id="cover" type="url" placeholder="https://"></input>
+          <input id="cover" type="url" placeholder="https://" />
         </div>
         <div className={styles.field}>
           <label htmlFor="rating">Avaliação (1-5)</label>
-          <input type="number" min={0} max={5}></input>
+          <input type="number" min={0} max={5} />
         </div>
         <div className={styles.field}>
           <label htmlFor="notes">Notas</label>
-          <textarea
-            id="notes"
-            placeholder="Suas anoteções sobre o livro..."></textarea>
+          <textarea id="notes" placeholder="Suas anotações sobre o livro..." />
         </div>
       </div>
       <div className={styles.buttons__container}>
-        <Button background="var(--foreground)" color="var(--background)" text="Cancelar"/>
-        <Button background="var(--background) " color="var(--foreground)" text="Enviar"/>
+        <Button
+          background="var(--foreground)"
+          color="var(--background)"
+          text="Cancelar"
+          onClick={() => setShowForm(false)}
+        />
+        <Button
+          background="var(--background)"
+          color="var(--foreground)"
+          text="Enviar"
+        />
       </div>
     </form>
   );

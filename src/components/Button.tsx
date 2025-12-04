@@ -7,9 +7,11 @@ type Button = {
   color?: string | "var(--background)";
   background?: string | "var(--foreground)";
   borderColor?: string | "var(--border-color)";
+  onClick?: React.MouseEventHandler<HTMLButtonElement>
 };
 
 export default function Button({
+  onClick,
   text,
   icon,
   background,
@@ -18,6 +20,7 @@ export default function Button({
 }: Button) {
   return (
     <button
+      onClick={onClick}
       className={styles.button}
       style={{
         backgroundColor: background,
